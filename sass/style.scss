@@ -4,6 +4,7 @@ $button2-color: #CB4E4E;
 $button2-s: #AB3C3C;
 $button3-color: #fcad26;
 $button3-s: #f29e0d;
+$button4-h: #24b662;
 
 
 
@@ -621,9 +622,114 @@ h6 { font-size: 14px; line-height: 30px; }
 
 
 /* --------------------------------------------------------------
+    Section 4
+-------------------------------------------------------------- */
+#section4{
+    background: $color4;
+    padding: 60px 0;
+    margin: 0 auto;
+    text-align: center;
+
+    .btn4{
+        position: relative;
+        padding: 25px 80px;
+        margin: 30px;
+        border: 3px solid $w;
+        border-radius: 50px;
+        outline: none;
+        color: $w;
+        background: transparent;
+        font-size: 20px;
+        font-weight: 700;
+        overflow: hidden;
+        @include transition(all 0.3s);
+
+        &:hover{
+            background: $button4-h;
+            @include transition(all 0.3s);
+        }
+
+        &:active{
+            border-color: #17954c;
+            color: #17954c;
+
+            &:before{
+                color: #17954c;
+            }
+        }
+
+        &::before{
+            position: absolute;
+            height: 100%;
+            font-size: 125%;
+            @include transition(all 0.3s);
+            line-height: 3;
+            color: $w;
+            top: 0;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    .btn30{
+
+        &::before{
+            top: 0;
+            left: 130%;           
+        }
+
+        &:hover::before{
+            left: 75%;
+        }
+    }
+
+    .btn31{
+
+        &::before{
+            right: 130%;
+        }
+        &:hover::before{
+            right: 75%;
+        }
+    }
+
+    .btn32{
+
+        &::before{
+            opacity: 0;
+            left: 60%;
+        }
+
+        &:hover::before{
+            opacity: 1;
+            left: 75%;
+        }
+    }
+
+    .btn33{
+
+        &::before{
+            opacity: 0;
+            right: 60%;
+        }
+
+        &:hover::before{
+            opacity: 1;
+            right: 75%;
+        }
+    }
+}
+
+/* --------------------------------------------------------------
     Icon Moo
 -------------------------------------------------------------- */
-.btn3:before,
+.btn3::before, .btn3::after,
+.btn4::before, .btn4::after,
+.btn5::before, .btn5::after,
 .icon-cart{
     font-family: 'icomoon';
     speak: none;
