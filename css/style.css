@@ -256,7 +256,7 @@ h6 {
   opacity: 0.6;
 }
 
-.btn {
+.btn1 {
   position: relative;
   display: inline-block;
   padding: 20px 80px;
@@ -273,7 +273,12 @@ h6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.btn::after {
+.btn1:active, .btn1:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.btn1::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -283,7 +288,7 @@ h6 {
   transition: all 0.3s;
   background: #FFFFFF;
 }
-.btn::before {
+.btn1::before {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -293,16 +298,23 @@ h6 {
   transition: all 0.3s;
 }
 
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.button {
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* --------------------------------------------------------------
     Section 1
 -------------------------------------------------------------- */
 #section1 {
   padding: 60px 0;
   background-color: #0E83CD;
-}
-#section1 .button1 {
-  margin: 0 auto;
-  text-align: center;
 }
 #section1 .btn1 {
   position: relative;
@@ -897,6 +909,42 @@ h6 {
 }
 #section5 .btn37:hover::before, #section5 .btn38:hover::before, #section5 .btn39:hover::before {
   left: 0;
+}
+
+/* --------------------------------------------------------------
+    Section 6
+-------------------------------------------------------------- */
+#section6 {
+  background: #4593E3;
+  padding: 60px 0;
+}
+#section6 .btn6 {
+  background: #226fbe;
+}
+#section6 .btn6:hover {
+  background: transparent;
+  color: #FFFFFF;
+}
+#section6 .btn61 {
+  border-radius: none;
+}
+#section6 .btn62 {
+  border-radius: 10px;
+}
+#section6 .btn63 {
+  border-radius: 50px;
+}
+#section6 .btn40 {
+  border: 4px solid #226fbe;
+}
+#section6 .btn41 {
+  border: 2px dashed #226fbe;
+}
+#section6 .btn42 {
+  border: 2px dotted #226fbe;
+}
+#section6 .btn43 {
+  border: 4px double #226fbe;
 }
 
 /* --------------------------------------------------------------
