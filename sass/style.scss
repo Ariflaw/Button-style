@@ -1,0 +1,647 @@
+
+// Variabel Color
+$button2-color: #CB4E4E;
+$button2-s: #AB3C3C;
+$button3-color: #fcad26;
+$button3-s: #f29e0d;
+
+
+
+@import "bass/variabel";
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/animation";
+
+// Font
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon/icomoon.eot');
+    src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.woff') format('woff'),
+        url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* --------------------------------------------------------------
+    ICON
+-------------------------------------------------------------- */
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-envelope:before {
+    content: "\e000";
+}
+
+.icon-cart:before {
+    content: "\e007";
+}
+
+.icon-cart-2:before {
+    content: "\e008";
+}
+
+.icon-heart:before {
+    content: "\e009";
+}
+
+/* Filled heart */
+.icon-heart:after,
+.icon-heart-2:before {
+    content: "\e00a";
+}
+
+.icon-star:before {
+    content: "\e00b";
+}
+
+/* Filled star */
+.icon-star:after,
+.icon-star-2:before {
+    content: "\e00c";
+}
+
+.icon-arrow-right:before {
+    content: "\e00d";
+}
+
+.icon-arrow-left:before {
+    content: "\e003";
+}
+
+.icon-truck:before {
+    content: "\e00e";
+}
+
+.icon-remove:before {
+    content: "\e00f";
+}
+
+.icon-cog:before {
+    content: "\e010";
+}
+
+.icon-plus:before,
+.icon-plus:after {
+    content: "\e011";
+}
+
+.icon-minus:before {
+    content: "\e012";
+}
+
+.bh-icon-smiley:before {
+    content: "\e001";
+}
+
+.bh-icon-sad:before {
+    content: "\e002";
+}
+
+.icon-file:before {
+    content: "\e004";
+}
+
+.icon-remove-2:before {
+    content: "\e005";
+}
+
+
+
+/* --------------------------------------------------------------
+    Latihan Button
+-------------------------------------------------------------- */
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #89867e;
+    background: #fff;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #333;
+}
+
+/* --------------------------------------------------------------
+      2 - Typograpy
+-------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
+h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
+h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
+h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
+h5 { font-size: 18px; line-height: 30px; }
+h6 { font-size: 14px; line-height: 30px; }
+
+
+/* --------------------------------------------------------------
+    STYLE
+-------------------------------------------------------------- */
+#header{
+    margin: 0 auto;
+    text-align: center;
+    height: 150px;
+    margin-top: 60px;
+
+    h1{
+        color: #89867e;
+        font-weight: 300;
+        font-size: 42px;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    span{
+        font-size: 24px;
+        font-weight: 200;
+        opacity: 0.6;
+    }
+}
+
+
+/* --------------------------------------------------------------
+    Section 1
+-------------------------------------------------------------- */
+#section1{
+    padding: 60px 0;
+    background-color: $color1;
+
+    .button1{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .btn1{
+        position: relative;
+        display: inline-block;
+        padding: 20px 80px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        margin: 20px 30px;
+        background-color: $color1;
+        border: 3px solid $w;
+        z-index: 1;
+        color: $w;
+        text-transform: uppercase;
+        @include transition(all 0.3s);
+        overflow: hidden;
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            @include transition(all 0.3s);
+            background: $w;
+        }
+    }
+}
+
+#section1{
+    .btn11:hover, .btn11:active,
+    .btn12:hover, .btn12:active,
+    .btn13:hover, .btn13:active,
+    .btn14:hover, .btn14:active,
+    .btn15:hover, .btn15:active,
+    .btn16:hover, .btn16:active{
+        color: $color1;
+    }
+
+    // Style Button A1
+    .btn11:hover,
+    .btn11:active{
+        background-color: $w;
+        color: $color1;
+    }
+
+    // Style Button A2
+    .btn12::after{
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+    }
+    .btn12:hover::after{
+        height: 100%;
+    }
+
+    // Style Button A3
+    .btn13::after{
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .btn13:hover::after{
+        width: 100%;
+    }
+
+    // Style Button A4
+    .btn14::after{
+        width: 0;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    .btn14:hover::after{
+        width: 90%;
+        opacity: 1;
+    }
+
+    // Style Button A4
+    .btn15::after{
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        @include transform(translateX(-50%) translateY(-50%) rotate(45deg));
+    }
+    .btn15:hover::after{
+        height: 280%;
+        opacity: 1;
+    }
+
+    // Style Button A4
+    .btn16::after{
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    .btn16:hover::after{
+        height: 75%;
+        opacity: 1;
+    }
+}
+
+/* --------------------------------------------------------------
+    Section 2
+-------------------------------------------------------------- */
+#section2{
+    padding: 60px 0;
+    background: $color2;
+    margin: 0 auto;
+    text-align: center;
+
+    .btn1{
+        position: relative;
+        font-weight: 600;
+        display: inline-block;
+        padding: 25px 80px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        margin: 20px 30px;
+        background-color: $button2-color;
+        z-index: 1;
+        color: $w;
+        text-transform: uppercase;
+        @include transition(all 0.3s);
+        overflow: hidden;
+    }
+
+    // Style Button 17
+    .btn17{
+        box-shadow: 0 6px $button2-s;
+        @include border-radius( 0 0 5px 5px);
+        @include transition(none);
+
+        &:hover{
+            top: 2px;
+            box-shadow: 0 4px $button2-s
+        }
+
+        &:active{
+            top: 6px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+
+    // Style Button 18
+    .btn18{
+        box-shadow: 0 6px $button2-s;
+        @include border-radius( 0 0 5px 5px);
+        @include transition(none);
+
+        &:hover{
+            top: -2px;
+            box-shadow: 0 8px $button2-s;
+        }
+
+        &:active{
+            top: 6px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+
+    // Style Button 19
+    .btn19{
+        box-shadow: -6px 0  $button2-s;
+        @include border-radius(5px);
+        @include transition(none);
+
+        &:hover{
+            left: -2px;
+            box-shadow: -4px 0  $button2-s;
+        }
+
+        &:active{
+            left: -6px;
+            box-shadow: 0px 0  $button2-s;
+        }
+    }
+
+     // Style Button 20
+    .btn20{
+        box-shadow: 6px 0  $button2-s;
+        @include border-radius(5px);
+        @include transition(none);
+
+        &:hover{
+            right: -2px;
+            box-shadow: 4px 0  $button2-s;
+        }
+
+        &:active{
+            right: -6px;
+            box-shadow: 0 0  $button2-s;
+        }
+    }
+
+    // Style Button 18
+    .btn21{
+        box-shadow: 0 6px $button2-s;
+        @include border-radius( 30px);
+        @include transition(none);
+
+        &:hover{
+            top: 2px;
+            box-shadow: 0 4px $button2-s;
+        }
+
+        &:active{
+            top: 6px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+
+    // Style Button 22
+    .btn22{
+        box-shadow: 0 6px $button2-s;
+        @include border-radius( 10px);
+        @include transition(none);
+
+        &:hover{
+            top: 2px;
+            box-shadow: 0 4px $button2-s;
+        }
+
+        &:active{
+            top: 6px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+
+    // Style Button 22
+    .btn23{
+        width: 90px;
+        height: 90px;
+        padding: 0;
+        box-shadow: 0 6px $button2-s;
+        @include border-radius(50%);
+        @include transition(none);
+
+        &:hover{
+            top: 2px;
+            box-shadow: 0 4px $button2-s;
+        }
+
+        &:active{
+            top: 6px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+
+    // Style Button 22
+    .btn24{
+        width: 90px;
+        height: 90px;
+        padding: 0;
+        box-shadow: 0 6px $button2-s;
+        @include border-radius(50%);
+        @include transition(none);
+
+        &:hover{
+            top: -2px;
+            box-shadow: 0 8px $button2-s;
+        }
+
+        &:active{
+            top: 4px;
+            box-shadow: 0 0 $button2-s;
+        }
+    }
+}
+
+/* --------------------------------------------------------------
+    Section 3
+-------------------------------------------------------------- */
+#section3{
+    padding: 60px 0;
+    background-color: $color3;
+    margin: 0 auto;
+    text-align: center;
+
+    .btn3{
+        position: relative;
+        font-weight: 700;
+        display: inline-block;
+        padding: 25px 40px 25px 100px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 20px 30px;
+        background-color: $button3-color;
+        z-index: 1;
+        color: $w;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include transition(all 0.3s);
+
+        &:hover{
+            background-color:$button3-s;
+        }
+
+        &:before{
+            position: absolute;
+            height: 100%;
+            font-size: 30px;
+            top: 0;
+            width: 60px;
+            line-height: 60px;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            @include transition(all 0.3s);
+        }
+
+    }
+
+    .btn25{
+
+        &:before{
+            background: rgba(0,0,0,0.05);
+            left: 0;
+        }
+    }
+
+    .btn26{
+        @include border-radius(10px);
+
+    &:before{
+            border-right: 2px solid rgba(255,255,255,0.5);
+            left: 0;
+        }
+    }
+
+    .btn27{
+        padding: 80px 20px 20px 20px;
+        @include border-radius(10px);
+        box-shadow: 0px 3px #DA9622;
+
+        &::before{
+            background: $w;
+            width: 100%;
+            height: 60px;
+            left: 0;
+            line-height: 60px;
+            color: $button3-color;
+            @include border-radius(10px 10px 0 0);
+            font-size: 140%;
+        }
+    }
+
+    .btn28{
+        border-radius: 10px;
+
+        &::before{
+            width: 60px;
+            background-color: $w;
+            height: 100%;
+            z-index: -1;
+            color: $button3-s;
+            border-radius: 10px 0 0 10px;
+            line-height: 3;
+            font-size: 140%;
+            left: 0;
+        }
+
+        &::after{
+            width: 20px;
+            height: 20px;
+            background-color: $w;
+            left: 60px;
+            top: 50%;
+            margin: -10px 0 0 -10px;
+            @include transform(rotate(45deg));
+        }
+    }
+
+    .btn29{
+        padding: 25px 120px 25px 60px;
+        overflow: hidden;
+
+        &::before{
+            right: 10px;
+            left: auto;
+            line-height: 3;
+            z-index: 2;
+            font-size: 140%;
+
+        }
+
+        &::after{
+            width: 30%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            z-index: 1;
+            top: 0;
+            right: 0;
+            margin: -5px 0 0 -5px;
+            @include transform(rotate(-20deg));
+            @include transform-origin(0,0);
+        }
+
+        &:hover::after{
+            width: 40%;
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------
+    Icon Moo
+-------------------------------------------------------------- */
+.btn3:before,
+.icon-cart{
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
