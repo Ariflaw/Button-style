@@ -5,6 +5,7 @@ $button2-s: #AB3C3C;
 $button3-color: #fcad26;
 $button3-s: #f29e0d;
 $button4-h: #24b662;
+$button5-c: #823aa0;
 
 
 
@@ -191,6 +192,36 @@ h6 { font-size: 14px; line-height: 30px; }
         opacity: 0.6;
     }
 }
+
+.btn{
+        position: relative;
+        display: inline-block;
+        padding: 20px 80px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 20px 30px;
+        z-index: 1;
+        color: $w;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include transition(all 0.3s);
+
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            @include transition(all 0.3s);
+            background: $w;
+        }
+
+        &::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include transition(all 0.3s);
+        }
+    }
 
 
 /* --------------------------------------------------------------
@@ -679,7 +710,7 @@ h6 { font-size: 14px; line-height: 30px; }
 
         &::before{
             top: 0;
-            left: 130%;           
+            left: 130%;
         }
 
         &:hover::before{
@@ -724,13 +755,100 @@ h6 { font-size: 14px; line-height: 30px; }
     }
 }
 
+
+/* --------------------------------------------------------------
+    Section 5
+-------------------------------------------------------------- */
+#section5{
+    padding: 60px 0;
+    background: $color5;
+    text-align: center;
+
+    .btn5{
+        border: none;
+        outline: none;
+        background: $button5-c;
+        font-size: 16px;
+        color: $w;
+        min-width: 260px;
+        height: 70px;
+        line-height: 24px;
+        overflow: hidden;
+        @include backface-visibility(hidden);
+
+        &:active{
+            background: #9053a9;
+            top: 2px;
+            box-shadow: none;
+
+            &:before{
+                color: #703b87;
+            }
+        }
+
+        &::before{
+            position: absolute;
+            font-size: 180%;
+            line-height: 2.5;
+        }
+    }
+
+    .btn34, .btn35, .btn36{
+        
+        span{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            @include transition(all 0.3s);
+            backface-visibility: hidden;
+            line-height: 2;
+        }
+
+        &::before{
+            left: 0;
+            top: -100%;
+        }
+            
+        &:hover span{
+            @include transform(translateY(300%));
+        }
+        &:hover::before{
+            top: 0;
+        }
+    }
+
+    .btn37, .btn38, .btn39{
+        
+        span{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            @include transition(all 0.3s);
+            backface-visibility: hidden;
+            line-height: 2;
+        }
+
+        &::before{
+            left: -100%;
+            top: 0;
+        }
+            
+        &:hover span{
+            @include transform(translateX(300%));
+        }
+        &:hover::before{
+            left: 0;
+        }
+    }
+}
+
+
 /* --------------------------------------------------------------
     Icon Moo
 -------------------------------------------------------------- */
 .btn3::before, .btn3::after,
 .btn4::before, .btn4::after,
-.btn5::before, .btn5::after,
-.icon-cart{
+.btn5::before, .btn5::after{
     font-family: 'icomoon';
     speak: none;
     font-style: normal;
